@@ -16,9 +16,6 @@ namespace HW_5
             indent += lastDirectory ? "  " : "│";
             Console.WriteLine(dir.Name);
 
-            //TODO: Распечатать наименования всех файлов
-            
-
             DirectoryInfo[] subDirs = dir.GetDirectories();
             for (int i = 0; i < subDirs.Length; i++)
             {
@@ -29,22 +26,18 @@ namespace HW_5
         {
             // Exercise_1
             Console.WriteLine("Exercise_1");
-            Console.WriteLine("_______________________");
-           // string fileName_1 = "text.txt";
+            Console.WriteLine("_______________________");           
             Console.WriteLine("Введите сообщение: ");
             string str = Console.ReadLine();
             File.WriteAllText("text.txt", str);
-            //string fileText = File.ReadAllText(fileName_1);
             Console.WriteLine("Ваше сообщение в файле: " + File.ReadAllText("text.txt"));
             Console.WriteLine();
 
             // Exercise_2
             Console.WriteLine("Exercise_2");
             Console.WriteLine("_______________________");
-           // string fileName_2 = "startup.txt";
             string currentTime = DateTime.Now.ToString();
             File.WriteAllText("startup.txt", currentTime);
-            //string fileText_2 = File.ReadAllText(fileName_2);
             Console.WriteLine("Cообщение в файле: " + File.ReadAllText("startup.txt"));
             Console.WriteLine();
 
